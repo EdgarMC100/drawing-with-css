@@ -7,13 +7,12 @@ class SwitchScreen extends HTMLElement {
   static get styles() {
     return /* css */`
       :host{
-
+        --width: 445px;
       }
-
       .container{
-        width: 100%;
+        width: var(--width);
         height: 100%;
-        background: var(--white);
+        background: #000;
       }`;
   }
 

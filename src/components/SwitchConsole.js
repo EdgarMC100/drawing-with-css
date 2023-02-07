@@ -9,16 +9,17 @@ class SwitchConsole extends HTMLElement {
   static get styles() {
     return /* css */ `
       :host{
+        --joycon-width: 90px;
         --width: 625px;
         --height: 275px;
-        --white: white;
       }
 
       .container{
+        display: grid;
+        grid-template-columns: var(--joycon-width) 1fr var(--joycon-width);
         width: var(--width);
         height: var(--height);
         background: #333;
-        border: 10px dashed gray;
       }
     `;
   }

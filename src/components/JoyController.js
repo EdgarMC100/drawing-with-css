@@ -7,7 +7,22 @@ class JoyController extends HTMLElement {
   static get styles() {
     return /* css */`
      :host{
-      display: none;
+      --radius-size: 50px
+     }
+
+     .container{
+      height: 100%;
+      background: var(--color);
+     }
+
+     :host(.right) .container{
+      --color: #FF3C28;
+      border-radius: 0 var(--radius-size) var(--radius-size) 0;
+     }
+
+     :host(.left) .container{
+      --color: #0AB9E6;
+      border-radius: var(--radius-size) 0 0 var(--radius-size);
      }
   `;
   }
@@ -19,7 +34,7 @@ class JoyController extends HTMLElement {
   render() {
     this.shadowRoot.innerHTML = /* html */`
       <style>${JoyController.styles}</style>
-      <div>
+      <div class="container">
         <img src="">
       </div>`;
   }
