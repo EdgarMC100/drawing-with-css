@@ -7,7 +7,7 @@ class JoyController extends HTMLElement {
   static get styles() {
     return /* css */`
      :host{
-      --radius-size: 50px
+      --radius-size: 50px;
      }
 
      .container{
@@ -16,12 +16,12 @@ class JoyController extends HTMLElement {
      }
 
      :host(.right) .container{
-      --color: #FF3C28;
+      --color: #de5e53;
       border-radius: 0 var(--radius-size) var(--radius-size) 0;
      }
 
      :host(.left) .container{
-      --color: #0AB9E6;
+      --color: #67b9de;
       border-radius: var(--radius-size) 0 0 var(--radius-size);
      }
   `;

@@ -1,3 +1,4 @@
+import "./SwitchImageBackground";
 class SwitchScreen extends HTMLElement {
   constructor() {
     super();
@@ -8,12 +9,22 @@ class SwitchScreen extends HTMLElement {
     return /* css */`
       :host{
         --width: 445px;
+        --screen-size: 90%;
       }
       .container{
         width: var(--width);
         height: 100%;
+        background: #333436;
+        display: grid;
+        place-items: center;
+      }
+      .screen{
+        width: var(--screen-size);
+        height: var(--screen-size);
         background: #000;
-      }`;
+        border-radius: 8px;
+      }
+    `;
   }
 
   connectedCallback() {
@@ -24,6 +35,9 @@ class SwitchScreen extends HTMLElement {
     this.shadowRoot.innerHTML = /* html */`
       <style>${SwitchScreen.styles}</style>
       <div class="container">
+        <div class="screen">
+          <switch-image-background></switch-image-background>
+        </div>
       </div>
     `;
   }

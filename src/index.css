@@ -1,3 +1,18 @@
+@font-face {
+  font-family: hwygcond;
+  src: url("../src/assets/fonts/highway_gothic/HWYGNRRW.TTF") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: hwygexpd;
+  src: url("../src/assets/fonts/Highway_Gothic_Expanded/HWYGEXPD.ttf") format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
 body{
   background: #223;
+  font-family: hwygexpd;
 }

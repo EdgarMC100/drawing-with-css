@@ -12,6 +12,9 @@ class SwitchConsole extends HTMLElement {
         --joycon-width: 90px;
         --width: 625px;
         --height: 275px;
+        display: grid;
+        place-items: center;
+        height: 100vh;
       }
 
       .container{
@@ -19,7 +22,6 @@ class SwitchConsole extends HTMLElement {
         grid-template-columns: var(--joycon-width) 1fr var(--joycon-width);
         width: var(--width);
         height: var(--height);
-        background: #333;
       }
     `;
   }

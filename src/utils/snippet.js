@@ -4,18 +4,18 @@ class $1 extends HTMLElement {
     this.attachShadow({ mode: "open" });
   }
 
-  static get styles(){
-    return
-     : host{
+  static get styles() {
+    return /* css */
+     :host{
         $4
      }
   }
 
-  connectedCallback(){
+  connectedCallback() {
     this.render();
   }
 
-  render(){
+  render() {
     this.shadowRoot.innerHTML = /* html */`
       <style>${$1.styles}</style>
       <div>
